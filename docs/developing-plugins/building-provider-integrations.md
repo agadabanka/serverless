@@ -50,7 +50,6 @@ Serverless will automatically exclude the following files / folders to reduce th
 - .gitignore
 - .serverless
 - serverless.yml
-- serverless.env.yml
 - .DS_Store
 
 You can always include previously excluded files and folders if you want to.
@@ -77,8 +76,7 @@ Here are the steps the AWS plugins take to compile and deploy the service on the
 
 #### The steps in detail
 
-1. The [`serverless.yml`](../understanding-serverless/serverless-yml.md) and
-[`serverless.env.yml`](../understanding-serverless/serverless-env-yml.md) files are loaded into memory
+1. The [`serverless.yml`](../understanding-serverless/serverless-yml.md) file is loaded into memory
 2. A default AWS CloudFormation template is loaded (`deploy:initializeResources`)
 3. The CloudFormation template is deployed to AWS (A S3 bucket for the service gets created) (`deploy:createProviderStacks`)
 4. The functions of the [`serverless.yml`](../understanding-serverless/serverless-yml.md) file are compiled to lambda
